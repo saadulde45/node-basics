@@ -37,6 +37,8 @@ app.get("/", (req, res) => {
 
 require("./src/routes/employee.routes")(app);
 
+require("./src/middlewares/logging.middleware")(app);
+
 // set port, listen for requests
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
